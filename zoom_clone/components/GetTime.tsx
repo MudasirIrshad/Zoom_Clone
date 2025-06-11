@@ -10,7 +10,10 @@ function GetTime() {
     }, 1000);
     setTimeout(() => interval);
   }, []);
-  return `${time?.toLocaleTimeString()}`;
+  return `${time?.toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+  })}`;
 }
 
 export default GetTime;
