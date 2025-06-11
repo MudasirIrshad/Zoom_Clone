@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import ZoomIcon from "../public/icons/zoom-icon.svg";
 import MobileNav from "./MobileNav";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 
 function Navbar() {
   return (
@@ -17,9 +18,16 @@ function Navbar() {
         />
         <p className="max-sm:hidden">Yoom</p>
       </Link>
-      <div className="flex-between gap-5 sm:hidden ">
-        {/* Clerk user management */}
-        <MobileNav />
+      <div className="flex gap-4">
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
+        <SignedOut>
+          <SignInButton />
+        </SignedOut>
+        <div className="gap-5 sm:hidden ">
+          <MobileNav />
+        </div>
       </div>
     </nav>
   );
