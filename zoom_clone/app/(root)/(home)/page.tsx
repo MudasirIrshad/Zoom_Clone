@@ -1,4 +1,6 @@
+"use server"
 import GetTime from "@/components/GetTime";
+import MeetingTypeList from "@/components/MeetingTypeList";
 import React from "react";
 
 function Home() {
@@ -18,6 +20,10 @@ function Home() {
             <p className="text-lg">{currentDate}</p>
           </div>
         </div>
+      </div>
+
+      <div>
+        <MeetingTypeList />
       </div>
     </div>
   );

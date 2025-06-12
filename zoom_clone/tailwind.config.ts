@@ -14,6 +14,12 @@ const config: Config = {
           1: "#1C1F2E",
           2: "#161925",
         },
+        cardColors: {
+          1: "#FF742E",
+          2: "#0E78F9",
+          3: "#830EF9",
+          4: "#F9A90E",
+        },
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
