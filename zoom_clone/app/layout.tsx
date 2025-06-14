@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
+import { Toaster } from "react-hot-toast";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -35,7 +36,8 @@ export default function RootLayout({
           colorInputText: "white",
         },
         elements: {
-          userButtonPopoverActionButton: "hover:bg-[#252A41] hover:text-white text-white",
+          userButtonPopoverActionButton:
+            "hover:bg-[#252A41] hover:text-white text-white",
           userButtonPopoverUserName: "text-white",
           userButtonPopoverUserIdentifier: "text-white",
           userButtonPopoverFooter: "text-white",
@@ -47,6 +49,7 @@ export default function RootLayout({
         <body
           className={`${geistSans.variable} bg-dark-2 ${geistMono.variable} text-white antialiased`}
         >
+          <Toaster />
           {children}
         </body>
       </html>
