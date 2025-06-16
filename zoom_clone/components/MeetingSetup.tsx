@@ -51,8 +51,9 @@ function MeetingSetup({ setIsSetupComplete }: MeetingSetupProps) {
           call.join();
           setIsSetupComplete(true);
         }}
-        
+
       >
+        
         Join Meeting
       </Button>
     </div>
