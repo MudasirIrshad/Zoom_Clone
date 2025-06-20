@@ -18,8 +18,8 @@ function Meeting({ params }: { params: { id: string } }) {
     <div className="h-screen w-full">
       <StreamCall call={call}>
         <StreamTheme>
+          
           {!isSetupComplete ? (
-            
             <>
               <MeetingSetup setIsSetupComplete={setisSetupComplete} />
             </>
