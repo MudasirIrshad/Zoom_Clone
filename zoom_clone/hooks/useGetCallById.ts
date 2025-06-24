@@ -21,8 +21,6 @@ export const useGetCallById = (id: string | string[]) => {
     };
 
     loadCall(); // this is the way to call any async feature inside a useEffect hook
-  }, [client, id]);
-
-  
+  }, [client, id]);  
   return { call, isCallLoading };
 };
